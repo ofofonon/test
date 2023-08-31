@@ -7,7 +7,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { CgProfile } from "react-icons/cg";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import './server'
 import Portfolio from './components/Portfolio';
 
 
