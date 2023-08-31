@@ -1,0 +1,600 @@
+/* CSS Reset */
+body, header, nav, main, footer, h1, div, img, ul, figure, figcaption, section, article, aside {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+/*------------------navBar and burger menu-----------------------*/
+.tablet-desktop{
+    display: none;
+}
+
+.mobile{
+    display: block;
+}
+.sec1{
+    
+    margin-bottom: 3em;
+    
+}
+.sec2{
+    background-color: 	rgba(30, 10, 3, 0.9);
+    color: white;
+    font-family: 'Roboto Slab', serif;
+    clip-path: circle(64.3% at 50% 50%);
+}
+
+.sec3{
+    margin-top: 4em;
+}
+
+.sec4{
+    margin-top: 4em;
+    background-color: #1E0A03;
+    /* background-image: 	linear-gradient(#CC9933,#1E0A03); */
+    opacity: 0.9;
+    color: #fff;
+}
+
+.sec5{
+    margin-top: 4em;
+}
+
+.profile{
+    font-size: 10em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.testimonialImg{
+    max-width: 50%;
+    border-radius: 10em;
+}
+
+
+.mobileNav{
+    width: 100%;
+    height: 3em;
+    background-color: #1E0A03;
+    display: flex;
+    justify-content: flex-end;
+    padding-block: 1em;
+}
+
+.navfont, #nav-dropdown{
+    color: #fff;
+}
+
+.frame{
+    position: relative;
+    max-width: 450px;
+    margin: 2% auto;
+}
+
+.aboutH5{
+    font-family: 'Roboto Slab', serif;
+}
+ .aboutP{
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    margin-inline: 2em;
+    font-size: 0.8em;
+}
+.pic-text{
+    position: absolute;
+    bottom: 0;
+    background: rgba(30, 10, 3,0.6);
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5em; 
+    font-weight: bold;
+    font-family: 'Roboto Slab', serif;
+}
+
+.heromsg{
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.5;
+    text-align: center;
+    padding-inline: 0.4em;
+    text-shadow: 5px 5px 8px #ccc;    
+}
+.heromsgs{
+    position: absolute;
+    color: #ccc;
+    text-shadow: none;
+    font-weight: bold;
+    font-family: poppins;
+    top: 11.5em;
+    left: 1em;
+}
+
+
+.burger-menu{
+    height: 100%;
+    width: 4em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-right: 0;
+    background-color: black;
+    
+}
+
+.burger-bar{ 
+    width: 1.6em;
+    height: 0.2em;
+    background-color: white;
+    margin-left: 1em;
+    z-index: 2;
+}
+
+.menu{ 
+    width: 40%;
+    height:50vh;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+img{
+    max-width: 100%;
+}
+
+.frame img{
+    display: block;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.navContent{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    font-family:'Francois One', sans-serif;
+
+}
+.logo{
+    position: absolute;
+    top: 0;
+    width: 20%;
+}
+
+.heroImg{
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    z-index: -1;
+}
+
+.heropic1{
+    position: absolute;
+    top: 5em;
+    width: 65%;
+    left: 11em;
+}
+
+
+
+.heropic{
+    position: absolute;
+    top: 6em;
+    width: 50%;
+}
+
+.contact{
+    color: white;
+    background-color: #CC9933;
+    position: absolute;
+    top: 16em;
+    border: none;
+    left: 2.5em;
+    padding-inline: 0.5em;
+    padding-top: 0.3em;
+    padding-bottom: 0.5em;
+    font-family: 'Roboto Slab', serif;
+    z-index: -1;
+}
+
+.phoneNum{
+    margin-inline: 2.5em;
+    text-align: center;
+    padding-block: 0.5em;
+    padding-inline: 0.1em;
+    font-family: 'Roboto Slab', serif;
+    color: white;
+    background-color: #CC9933;
+
+}
+
+.buy{
+    font-family: 'Roboto Slab', serif;
+    text-align: center; 
+}
+
+.HomeImage{
+    /* border: none;
+    position: absolute;
+    top: 24.5em;
+    left: 0;
+    right: 0;
+    margin: auto; */
+}
+
+/* ------------sliding menu------------- */
+.hidden{
+    display: none;
+}
+
+.visible{
+    display: inherit;
+}
+
+/* ------------animations--------------- */
+.burger-bar.clicked:nth-child(1){
+    transform: rotate(45deg) translate(0.2em, 0.1em);
+    transition: ease-out 0.5s;
+}
+
+.burger-bar.clicked:nth-child(2){
+    transform: scale(0.1);
+    transition: ease-out 0.5s;
+}
+
+.burger-bar.clicked:nth-child(3){
+    transform: rotate(135deg) translate(-0.5em, 0.4em);
+    transition: ease-out 0.5s;
+}
+
+/* --------------unclicked------------- */
+.burger-bar.unclicked{
+    transform: rotate(0) translate(0);
+    transition: cubic-bezier(0.175, 0.885, 1.275);
+}
+
+/* footer */
+.footer{
+    background-color: #252525;
+    text-shadow: none;
+    color: grey;
+    padding-inline: 3em;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+}
+
+.footer h2{
+    color: #ccc;
+    text-shadow: none;
+}
+.flogo{
+    color: #ccc;
+    font-size: 1.8em;
+    margin-top: 0.5em;
+    display: block;
+    margin-inline: auto;
+}
+
+.smlogo{
+    color: #ccc;
+    margin-inline: 0.4em;
+    margin-top: 3em;
+    margin-bottom: 1em;
+}
+
+.cplogo{
+    font-size: 0.6em;
+    display: block;
+
+}
+
+/* Media Query for Tablet Viewport */
+
+@media screen and (min-width: 630px), print{
+    /* Tablet Viewport: Show tablet-desktop class, hide mobile class */
+    .tablet-desktop{
+        display: block;
+        
+    }
+
+    .mobile{
+        display: none;
+    }
+
+    
+
+    .navContent{
+        position: fixed;
+        background-color: #1E0A03;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-block: 0.3em;
+        padding-inline: 1em;
+        margin-block: 0;
+        z-index: 2;
+    }
+
+    .navImg{
+        width: 10%;
+    }
+
+
+    .heropic1{
+        position: absolute;
+        top: 4.5em;
+        left: 23em;
+        width: 55%;
+    }
+    .heropic2{
+        position: absolute;
+        top: 5.8em;
+        left: 60em;
+        width: 22%;
+    }
+}
+
+@media screen and (min-width: 630px), print{
+    .navContent{
+        width: 100%;
+        background-color: #1E0A03;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-block: 0.3em;
+        padding-inline: 1em;
+        margin-top: 0;
+        z-index: 2;
+    }
+
+    .navImg{
+        width: 5%;
+    }
+
+    .sec1{
+        padding-top: 3.2em;
+        margin-bottom: 1em;
+    }
+
+    .heropic1{
+        position:absolute;
+        top: 4.5em;
+        left: 50em;
+        width: 19%;
+    }
+    .heropic2{
+        position: absolute;
+        top: 5.6em;
+        left: 60em;
+        width: 22%;
+    }
+    .tagline{
+        position: absolute;
+        top: 8em;
+        left: 10em;
+        text-shadow: none;
+        color: #ccc;
+        max-width: 30em;
+    }
+
+    .contact{
+        left: 22em;
+        top: 18em;
+    }
+
+    
+
+    .servimg{     
+        display: flex;
+        width: 80%;
+        gap: 10px;
+        justify-content: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .frame1{
+        position: relative;
+    }
+    .pic-text{
+        font-size: small;
+    }
+
+
+    /*
+	Using Bootstrap
+*/
+
+.page_title {
+	font-weight: 300;
+	line-height: 120%;
+	margin: 20px 0;
+	text-shadow: 0 1px 5px rgba(0,0,0,.8);
+	text-transform: uppercase;
+}
+
+/* PEN STYLES ========== */
+.row {
+	margin: 0;
+}
+
+.showcaseContainer{
+    
+    background-color: #1E0A03;
+    margin-top: 5em;
+
+}
+
+.gen-flex{
+    display: flex;
+    
+    align-items: center;
+
+}
+.showcase {
+    display: flex;
+    width: 100%;
+    position: relative;
+    bottom: 1.5em;
+    margin-left: 3em;
+    
+}
+
+.show{
+    margin-left: 9em;
+    color: #ccc;
+    font-family: 'Roboto Slab', serif;
+}
+.show1{
+    margin-bottom: 4em;
+}
+
+
+.test_box {
+	padding: 0;
+}
+.test_box .inner {
+	background: #333;
+	display: block;
+	margin: 2px;
+	overflow: hidden;
+}
+.test_box .inner .test_click {
+	-webkit-align-content: center;
+	-ms-flex-line-pack: center;
+	align-content: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	background-color: rgba(0,0,0,.1);
+	color: #fff;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-wrap: wrap;
+	height: 200px;
+	mix-blend-mode: normal;
+	text-align: center;
+	text-decoration: none;
+	-webkit-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+.test_box .inner .test_click:hover {
+	background-color: rgba(30, 10, 3,0.6); 
+	mix-blend-mode: hard-light;
+}
+.flex_this {
+	-webkit-align-content: center;
+	-ms-flex-line-pack: center;
+	align-content: center;
+	display: inherit;
+	flex-wrap: inherit;
+	height: auto;
+	margin: 0;
+	padding: 10px;
+	-webkit-transition: all 300ms ease;
+	transition: all 300ms ease;
+	width: 100%;
+
+}
+.test_box .inner .test_click:hover .flex_this {
+	margin-top: -5px;
+}
+
+.test_title {
+	display: block;
+	font-weight: 700;
+    font-size: 1em;
+    font-family: 'Roboto Slab', serif;
+	margin: 0 0 20px;
+	width: 100%;
+    background-color: rgba(30, 10, 3,0.6);
+}
+.test_link {
+	border: 2px solid #fff;
+	display: inline-block;
+	font-size: .8em;
+	font-weight: 700;
+	letter-spacing: .1em;
+	margin: 0 auto;
+	padding: 10px 30px;
+	text-transform: uppercase;
+}
+
+.box-01 .inner {
+	background-image: url(/images/men.jpg);;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.box-02 .inner {
+	background-image: url(/images/women3.jpg);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.box-03 .inner {
+	background-image: url(/images/child.jpg);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.box-04 .inner {
+	background-image: url(/images/couple1.jpg);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.box-05 .inner {
+	background-image: url(/images/blackcouple.jpg);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.box-06 .inner {
+	background-image: url(/images/meno.jpg);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+    
+.sec4{
+    overflow-x: hidden;
+    background-color: #fff;
+    margin-top:0;
+    color: #000;
+}
+
+.aboutleft{
+     width: 50%; 
+    float: left;
+    padding-left: 1em;
+    font-size: larger;
+}
+
+.aboutright{
+    margin-left: 3em;
+    position: relative;
+    bottom: 6em;
+    left: 4.3em;
+    
+}
+.test{
+    background-color: #1E0A03;
+    color: #ccc;
+    text-shadow: none;
+    
+}
+
+
+}
